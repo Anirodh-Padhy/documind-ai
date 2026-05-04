@@ -1,0 +1,198 @@
+# 📄 DocuMind AI
+
+### *Ask your documents anything.*
+
+DocuMind AI is a **multi-document AI-powered question answering system (RAG)** that allows users to upload documents and interact with them using natural language. It leverages **semantic search (FAISS)** and **local LLMs (Ollama)** to provide accurate, context-aware answers.
+
+---
+
+## 🚀 Features
+
+### 📂 Multi-Document Support
+
+* Upload multiple PDF or TXT files
+* Switch between documents seamlessly
+* Independent processing for each document
+
+### 🧠 Retrieval-Augmented Generation (RAG)
+
+* Converts documents into embeddings
+* Uses FAISS for fast semantic search
+* Retrieves relevant context before generating answers
+
+### 💬 Conversational Chat Interface
+
+* Ask multiple questions per document
+* Maintains conversation history
+* Clean chat-style UI
+
+### 🤖 AI-Powered Answers
+
+* Uses local LLM (Ollama)
+* Context-aware responses
+* Avoids hallucination by restricting to document content
+
+### 💾 Persistent Chat History
+
+* Saves chat per document
+* Automatically loads previous conversations
+* Enables session continuity
+
+### ⚡ Optimized Performance
+
+* Efficient chunking strategy
+* Context size control for faster responses
+* Lightweight architecture
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+Document → Text Extraction → Cleaning → Chunking
+        → Embeddings → FAISS Vector Store
+        → Query → Context Retrieval → LLM → Answer
+```
+
+---
+
+## 📁 Project Structure
+
+```bash
+documind-ai/
+│
+├── app.py
+│
+├── parser/
+│   └── document_parser.py
+│
+├── utils/
+│   ├── text_cleaner.py
+│   └── history_manager.py
+│
+├── vectorstore/
+│   └── faiss_store.py
+│
+├── rag/
+│   └── rag_pipeline.py
+│
+├── data/
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/documind-ai.git
+cd documind-ai
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Install & Run Ollama
+
+```bash
+ollama run phi3
+```
+
+---
+
+### 4️⃣ Run Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🧪 Usage
+
+1. Upload one or more documents
+2. Select a document from the sidebar
+3. Ask questions related to the document
+4. View answers and conversation history
+
+---
+
+## 📊 Example
+
+```text
+Q: What is system architecture?
+
+A: System architecture refers to the structure and design of a system,
+including its components, relationships, and interactions...
+```
+
+---
+
+## 🧠 Tech Stack
+
+* **Frontend:** Streamlit
+* **Backend:** Python
+* **LLM:** Ollama (Local AI Model)
+* **Vector Database:** FAISS
+* **Embeddings:** Sentence Transformers
+* **PDF Processing:** pdfplumber
+
+---
+
+## 🔍 Key Highlights
+
+* Implements **Retrieval-Augmented Generation (RAG)**
+* Supports **multi-document semantic search**
+* Includes **persistent conversational memory**
+* Designed with **modular and scalable architecture**
+* Fully runs **locally (no API cost)**
+
+---
+
+## 🚀 Future Enhancements
+
+* Database integration (MongoDB / SQLite)
+* User authentication system
+* Multi-user support
+* Document summarization
+* Cloud deployment
+
+---
+
+## 👨‍💻 Author
+
+**Anirodh Padhy**
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+* ⭐ Star the repository
+* 🍴 Fork it
+* 📢 Share it
+
+---
+
+## 🏁 Conclusion
+
+DocuMind AI demonstrates how modern AI systems combine:
+
+* Natural Language Processing
+* Vector Databases
+* Local LLMs
+* Interactive UI
+
+to build **real-world intelligent applications** 🚀
